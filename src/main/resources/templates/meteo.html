@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Météo</title>
+</head>
+<body>
+<h1>Résultat pour l'adresse : <span th:text="${address}">[Adresse]</span></h1>
+<p>Réponse brute de l'API Etalab : <pre th:text="${response}">[Réponse]</pre></p>
+<p>Coordonnées GPS :</p>
+<ul>
+    <li>Latitude : <span th:text="${latitude}">[Latitude]</span></li>
+    <li>Longitude : <span th:text="${longitude}">[Longitude]</span></li>
+</ul>
+<a th:href="@{/adresse}">Retour au formulaire</a>
+<p>Météo :</p>
+<ul>
+    <li>Ville : <span th:text="${cityName}">[Ville]</span></li>
+    <li>Latitude Ville : <span th:text="${cityLatitude}">[Latitude Ville]</span></li>
+    <li>Longitude Ville : <span th:text="${cityLongitude}">[Longitude Ville]</span></li>
+    <li>Température minimale : <span th:text="${tmin}">[Température minimale]</span> °C</li>
+    <li>Température maximale : <span th:text="${tmax}">[Température maximale]</span> °C</li>
+    <li>Vitesse du vent : <span th:text="${windSpeed}">[Vitesse du vent]</span> km/h</li>
+    <li>Rafales de vent : <span th:text="${windGust}">[Rafales de vent]</span> km/h</li>
+    <li>Météo (code) : <span th:text="${weather}">[Météo]</span></li>
+    <li>Pluie : <span th:text="${rain}">[Pluie]</span> mm</li>
+</ul>
+</body>
+</html>

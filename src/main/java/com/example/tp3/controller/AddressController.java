@@ -15,4 +15,9 @@ public class AddressController {
         model.addAttribute("allAddresses", addressRepository.findAll());
         return "addresses";
     }
+
+    @GetMapping("/adresse")
+    public String showAddressForm() {
+        return "adresse"; // Le nom du fichier HTML du formulaire d'adresse
+    }
 }
