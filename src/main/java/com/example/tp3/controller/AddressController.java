@@ -20,4 +20,8 @@ public class AddressController {
     public String showAddressForm() {
         return "adresse"; // Le nom du fichier HTML du formulaire d'adresse
     }
+    @GetMapping("/home")
+    public String showHome() {
+        return "home"; // Le nom du fichier HTML du formulaire d'adresse
+    }
 }
