@@ -1,32 +1,29 @@
 <div th:fragment="navbar">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/home" style="font-weight: bold; font-size: 1.8rem; color: #007bff;">Ahmed Bourazza</a>
+      <a class="navbar-brand" href="/home" style="font-weight: bold; font-size: 1.8rem; color: #007bff;">
+        <i class="ri-user-line"></i> Ahmed Bourazza
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/home" style="font-size: 1.1rem; color: #333;">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/adresses" style="font-size: 1.1rem; color: #333;">liste des adresses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/adresse" style="font-size: 1.1rem; color: #333;">Recherche de méteo</a>
-          </li>
-          <!-- Dropdown menu simplifié et intuitif
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #333;">
-              Options
+            <a class="nav-link" href="/home" style="font-size: 1.1rem; color: #333;">
+              <i class="ri-home-line"></i> Home
             </a>
-            <ul class="dropdown-menu" aria-labelledby="newDropdown">
-              <li><a class="dropdown-item" href="#">Feature One</a></li>
-              <li><a class="dropdown-item" href="#">Feature Two</a></li>
-              <li><a class="dropdown-item" href="#">Feature Three</a></li>
-            </ul>
-          </li>-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adresses" style="font-size: 1.1rem; color: #333;">
+              <i class="ri-map-pin-line"></i> Liste des adresses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adresse" style="font-size: 1.1rem; color: #333;">
+              <i class="ri-cloud-line"></i> Recherche de méteo
+            </a>
+          </li>
         </ul>
       </div>
     </div>
