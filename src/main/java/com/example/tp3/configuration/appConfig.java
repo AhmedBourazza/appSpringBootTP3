@@ -14,14 +14,14 @@ public class appConfig {
 
     @Bean
     public RestTemplate restTemplate() {
-        RequestConfig requestConfig = RequestConfig.custom()
+     /*   RequestConfig requestConfig = RequestConfig.custom()
                 .setProxy(new HttpHost("proxy.univ-lemans.fr", 3128))
                 .build();
 
         CloseableHttpClient httpClient = HttpClients.custom()
                 .setDefaultRequestConfig(requestConfig)
                 .build();
-
-        return new RestTemplate(new HttpComponentsClientHttpRequestFactory(httpClient));
+*/
+        return new RestTemplate(new HttpComponentsClientHttpRequestFactory(/*httpClient*/));
     }
 }

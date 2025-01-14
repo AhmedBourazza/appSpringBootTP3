@@ -58,7 +58,11 @@ public class MeteoController {
             int windSpeed = forecast.path("wind10m").asInt();
             int windGust = forecast.path("gust10m").asInt();
             int weather = forecast.path("weather").asInt();
-            double rain = forecast.path("rr10").asDouble();
+            double rain = 0.0;
+            JsonNode rainNode = forecast.path("rr10");
+            if (!rainNode.isMissingNode()) {
+                rain = rainNode.asDouble();
+            }
 
             model.addAttribute("address", address);
             model.addAttribute("longitude", longitude);

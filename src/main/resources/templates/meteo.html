@@ -6,47 +6,95 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+
 <div th:replace="fragments/navbar :: navbar"></div>
 
 <div class="container mt-5">
+    <h1 class="mb-4 text-center">Météo pour l'adresse : <span th:text="${address}">[Adresse]</span></h1>
 
-    <h1 class="mb-3">Météo pour l'adresse : <span th:text="${address}">[Adresse]</span></h1>
+    <div class="row">
+        <!-- Informations sur la ville -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <i class="ri-map-pin-line"></i> Informations sur la Ville
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="text-center">
+                            <i class="ri-map-pin-line" style="font-size: 30px;"></i>
+                            <h5>Ville</h5>
+                            <p><span th:text="${cityName}">[Ville]</span></p>
+                        </div>
+                        <div class="text-center">
+                            <i class="ri-map-pin-line" style="font-size: 30px;"></i>
+                            <h5>Latitude Ville</h5>
+                            <p><span th:text="${cityLatitude}">[Latitude Ville]</span></p>
+                        </div>
+                    </div>
 
-    <div class="card mb-3">
-        <div class="card-header">
-            <i class="ri-map-pin-line"></i> Coordonnées GPS
+                    <div class="d-flex justify-content-between mt-4">
+                        <div class="text-center">
+                            <i class="ri-map-pin-line" style="font-size: 30px;"></i>
+                            <h5>Longitude Ville</h5>
+                            <p><span th:text="${cityLongitude}">[Longitude Ville]</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-            <ul class="list-unstyled">
-                <li><i class="ri-map-pin-line"></i> Latitude : <span th:text="${latitude}">[Latitude]</span></li>
-                <li><i class="ri-map-pin-line"></i> Longitude : <span th:text="${longitude}">[Longitude]</span></li>
-            </ul>
+
+        <!-- Informations météorologiques -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <i class="ri-weather-cloudy-line"></i> Météo
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="ri-cloudy-line" style="font-size: 30px;"></i>
+                                <h5>Temp. Min</h5>
+                                <p><span th:text="${tmin}">[Température minimale]</span> °C</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="ri-cloudy-line" style="font-size: 30px;"></i>
+                                <h5>Temp. Max</h5>
+                                <p><span th:text="${tmax}">[Température maximale]</span> °C</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="ri-windy-line" style="font-size: 30px;"></i>
+                                <h5>Vitesse du vent</h5>
+                                <p><span th:text="${windSpeed}">[Vitesse du vent]</span> km/h</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="ri-water-line" style="font-size: 30px;"></i>
+                                <h5>Pluie</h5>
+                                <p><span th:text="${rain}">[Pluie]</span> mm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <i class="ri-weather-cloudy-line"></i> Météo
-        </div>
-        <div class="card-body">
-            <ul class="list-unstyled">
-                <li><strong><i class="ri-map-line"></i> Ville :</strong> <span th:text="${cityName}">[Ville]</span></li>
-                <li><strong><i class="ri-map-pin-line"></i> Latitude Ville :</strong> <span th:text="${cityLatitude}">[Latitude Ville]</span></li>
-                <li><strong><i class="ri-map-pin-line"></i> Longitude Ville :</strong> <span th:text="${cityLongitude}">[Longitude Ville]</span></li>
-                <li><strong><i class="ri-cloudy-line"></i> Température minimale :</strong> <span th:text="${tmin}">[Température minimale]</span> °C</li>
-                <li><strong><i class="ri-cloudy-line"></i> Température maximale :</strong> <span th:text="${tmax}">[Température maximale]</span> °C</li>
-                <li><strong><i class="ri-cloudy-line"></i>Vitesse du vent :</strong> <span th:text="${windSpeed}">[Vitesse du vent]</span> km/h</li>
-                <li><strong><i class="ri-cloudy-line"></i>Rafales de vent :</strong> <span th:text="${windGust}">[Rafales de vent]</span> km/h</li>
-                <li><strong><i class="ri-cloudy-line"></i> Météo (code) :</strong> <span th:text="${weather}">[Météo]</span></li>
-                <li><strong><i class="ri-water-line"></i> Pluie :</strong> <span th:text="${rain}">[Pluie]</span> mm</li>
-            </ul>
-        </div>
+    <!-- Centrer le bouton "Retour au formulaire" -->
+    <div class="d-flex justify-content-center mt-5">
+        <a class="btn btn-secondary" th:href="@{/adresse}">
+            <i class="ri-arrow-left-line"></i> Retour au formulaire
+        </a>
     </div>
-
-    <a class="btn btn-primary mb-3" th:href="@{/adresse}">
-        <i class="ri-arrow-left-line"></i> Retour au formulaire
-    </a>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
