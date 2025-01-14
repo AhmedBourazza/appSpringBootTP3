@@ -8,6 +8,29 @@ Ce projet consiste à créer une application web utilisant Java et plusieurs tec
 entrez ce lien : http://127.0.0.1:9090/home
 Le code pour configurer un proxy est déjà inclus, mais il est commenté. Vous pouvez l'utiliser pour effectuer la configuration.
 
+## Technologies et Dépendances
+
+### 1. **Spring** ([Site officiel](https://spring.io/))
+Spring est un framework pour le développement d'applications Java, offrant des fonctionnalités telles que l'inversion de contrôle (IoC), la gestion des transactions et l'injection de dépendances. Il simplifie le développement en structurant le code de manière modulaire.
+
+### 2. **Spring Boot** ([Site officiel](https://spring.io/projects/spring-boot))
+Spring Boot est un module de Spring qui permet de créer rapidement des applications Java autonomes et prêtes pour la production. Il offre une configuration automatique et des dépendances prédéfinies pour accélérer le développement.
+
+### 3. **JPA** ([Documentation](https://www.tutorialspoint.com/jpa/index.htm))
+JPA (Java Persistence API) est une spécification Java pour gérer les interactions entre les objets Java et les bases de données relationnelles. Elle permet de mapper des classes Java à des tables de base de données.
+
+### 4. **Hibernate** ([Site officiel](http://hibernate.org/))
+Hibernate est une implémentation populaire de JPA. Il facilite la persistance des données en générant automatiquement le SQL nécessaire pour interagir avec la base de données. Il prend également en charge des fonctionnalités avancées telles que le cache et les transactions.
+
+### 5. **H2 Database** ([Site officiel](http://www.h2database.com/html/main.html))
+H2 est une base de données relationnelle légère et embarquée. Elle est souvent utilisée pour le développement et les tests en raison de sa simplicité et de son exécution en mémoire.
+
+### 6. **Spring Data JPA** ([Site officiel](https://spring.io/projects/spring-data-jpa))
+Spring Data JPA est une extension de Spring qui simplifie l'accès aux bases de données en fournissant des interfaces prêtes à l'emploi pour effectuer des opérations CRUD. Elle réduit le code boilerplate en permettant de définir des requêtes directement dans des interfaces.
+
+### 7. **Thymeleaf** ([Site officiel](https://www.thymeleaf.org/))
+Thymeleaf est un moteur de templates Java utilisé pour créer des interfaces utilisateur dynamiques. Il est souvent utilisé avec Spring Boot pour générer des pages HTML en utilisant les données fournies par les contrôleurs.
+
 ## Questions et Réponses
 
 ### TP 3 : Application Web avec Spring Boot
