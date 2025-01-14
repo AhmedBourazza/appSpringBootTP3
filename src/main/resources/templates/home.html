@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <!-- Importer la police Poppins depuis Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        /* Appliquer la police Poppins à tout le texte */
         body {
             font-family: 'Poppins', sans-serif;
             color: white;
@@ -18,14 +16,13 @@
             padding: 0;
         }
 
-        /* Conteneur de l'image et du texte */
         .image-text-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100vh; /* Hauteur pleine page */
+            height: 100vh;
             padding: 20px;
-            flex-direction: row-reverse; /* Mettre l'image à droite */
+            flex-direction: row-reverse;
         }
 
         .text-container {
@@ -38,40 +35,36 @@
         .text-container h1 {
             font-size: 3rem;
             font-weight: bold;
-            color: #322a0e; /* Couleur dorée modifiée */
+            color: #322a0e;
         }
 
         .text-container p {
             font-size: 1.25rem;
         }
 
-        /* Conteneur de l'image */
+
         .image-container {
             flex: 1;
-            max-width: 50%; /* Limiter la largeur de l'image à 50% */
+            max-width: 50%;
         }
 
         .image-container img {
             max-width: 100%;
             height: auto;
-            object-fit: cover; /* Assure que l'image couvre l'espace sans être déformée */
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation bar -->
 <div th:replace="fragments/navbar :: navbar"></div>
 
-<!-- Conteneur de l'image et du texte -->
 <div class="image-text-container">
-    <!-- Conteneur du texte à gauche -->
     <div class="text-container">
         <h1>POO : API & Outils<br> TD et TP</h1>
         <p>Utilisation d'API web avec Spring Boot</p>
     </div>
 
-    <!-- Conteneur de l'image à droite -->
     <div class="image-container">
         <img src="/img.png" alt="Image centrale">
     </div>
